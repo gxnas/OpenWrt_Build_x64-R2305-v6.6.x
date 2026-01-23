@@ -11,10 +11,11 @@ sed -i "/helloworld/d" feeds.conf.default
 sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 #sed -i '1i src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '2i src-git small https://github.com/kenzok8/small' feeds.conf.default
-sed -i '$a src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages' feeds.conf.default
-sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
+#sed -i '$a src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages' feeds.conf.default
+#sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
-
+sed -i '$a src-git passwall_packages https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git;main' feeds.conf.default
+sed -i '$a src-git passwall_luci https://github.com/Openwrt-Passwall/openwrt-passwall.git;main' feeds.conf.default
 mkdir wget
 
 cat>rename.sh<<-\EOF
