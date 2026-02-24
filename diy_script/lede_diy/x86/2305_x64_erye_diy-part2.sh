@@ -66,9 +66,9 @@ rm -rf packages
 
 # 修复Shadowsocks报错
 rm -rf feeds/helloworld/shadowsocks-rust
-wget -P feeds/helloworld/shadowsocks-rust https://raw.githubusercontent.com/gxnas/OpenWrt_Build_x64/refs/heads/main/personal/shadowsocks-rust/Makefile
+wget -P feeds/helloworld/shadowsocks-rust https://raw.githubusercontent.com/gxnas/OpenWrt_Build_x64-R2305-v6.6.x/refs/heads/main/personal/shadowsocks-rust/Makefile
 rm -rf feeds/passwall_packages/shadowsocks-rust
-wget -P feeds/passwall_packages/shadowsocks-rust https://raw.githubusercontent.com/gxnas/OpenWrt_Build_x64/refs/heads/main/personal/shadowsocks-rust/Makefile
+wget -P feeds/passwall_packages/shadowsocks-rust https://raw.githubusercontent.com/gxnas/OpenWrt_Build_x64-R2305-v6.6.x/refs/heads/main/personal/shadowsocks-rust/Makefile
 
 #luci-app-turboacc
 rm -rf feeds/luci/applications/luci-app-turboacc
@@ -96,13 +96,6 @@ git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git package/
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/luci/applications/luci-app-mosdns
 git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
-
-# passwall
-rm -rf feeds/luci/applications/luci-app-passwall
-merge_package main https://github.com/xiaorouji/openwrt-passwall package/custom luci-app-passwall
-
-# passwall2
-# merge_package main https://github.com/xiaorouji/openwrt-passwall2 package/custom luci-app-passwall2
 
 # openclash
 rm -rf feeds/luci/applications/luci-app-openclash
